@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#113285"
+    tools:context=".MainActivity">
+
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView.Large"
+        android:layout_width="196dp"
+        android:layout_height="193dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="105dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="228dp"
+        android:visibility="visible"
+        app:indicatorName="LineScalePulseOutIndicator" />
+
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/choose_from_album"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+
+        android:background="@drawable/button_danger_rounded"
+        android:text="相册" />
+
+        <Button
+            android:id="@+id/take_photo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="100dp"
+            android:layout_toRightOf="@id/choose_from_album"
+            android:background="@drawable/button_danger_rounded"
+            android:text="拍照" />
+    </RelativeLayout >
+
+
+
+</RelativeLayout >

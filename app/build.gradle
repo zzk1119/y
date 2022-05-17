@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.chaquo.python' //添加
+
+android {
+    compileSdkVersion 32
+    buildToolsVersion "32.0.0"
+
+    defaultConfig {
+        applicationId "com.zk.myapp"
+        minSdkVersion 21
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 32
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            // 指定abi，如需在模拟器调试，增加"x86"，否则指定"armeabi-v7a"即可
+            abiFilters "armeabi-v7a", "x86"
+        }
+        python {
+            // 指定python路径
+            buildPython "C:\\Users\\18503\\AppData\\Local\\Programs\\Python38\\python.exe"
+            //buildPython "C:\\Users\\18503\\anaconda3\\python.exe"
+
+            pip{
+                //options "--extra-index-url", "https://pypi.tuna.tsinghua.edu.cn/simple/"
+                options "--timeout", "1000"
+                install "opencv-contrib-python"
+                install "matplotlib"
+                install "numpy"
+            }
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation'com.wang.avi:library:2.1.3'
+    implementation'com.nineoldandroids:library:2.4.0'
+
+
+}

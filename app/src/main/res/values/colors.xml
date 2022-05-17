@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B54434</color>     <!--Appbar背景色-->
+    <color name="colorPrimaryDark">#1C1C1C</color>   <!--状态栏颜色-->
+    <color name="colorAccent">#C73E3A</color>      <!--控制各个控件被选中时的颜色-->
+    <color name="windowBackground">#113285</color>
+
+    <color name="bbutton_danger_pressed">#ffd2322d</color>
+    <color name="bbutton_danger_edge">#ffd43f3a</color>
+    <color name="bbutton_danger_disabled">#a5d9534f</color>
+    <color name="bbutton_danger_disabled_edge">#a5d43f3a</color>
+    <color name="bbutton_danger">#ffd9534f</color>
+    <color name="text_font_white">#FFFFFF</color>
+
+</resources>
